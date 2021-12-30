@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
-const PORT = "4000"
 const TutuRoute = require('./routes/tutorialRoute')
 const PostRoute = require('./routes/postRoute')
 const UserRoute = require('./routes/UserRoute')
 const connection = require('./config/config')
 require('dotenv').config();
+const PORT = process.env.PORT || 4500
 connection();
 
 app.use(express.json())
